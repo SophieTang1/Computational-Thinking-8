@@ -45,12 +45,12 @@ for i in range(34):
 # # TODO - complete the elif for player 2 winning
 # # TODO - write another elif for player 3 and player 4
 if x1 >= x2 and x1 >= x3 and x1 >= x4:
-    print("player 1 wins!")
+    print("corgi wins!")
 elif x1 <= x2 and x2 >= x3 and x2 >= x4:
-    print("player 2 wins!")
+    print("fox 2 wins!")
 elif x1 <= x3 and x2 <= x3 and x4 <= x3:
-    print ("player 3 wins!")
+    print ("milkjug wins!")
 elif x1 <= x4 and x4 >= x2 and x4 >= x3:
-    print ("player 4 wins!")
+    print ("flowers wins!")
 
 turtle.exitonclick()
