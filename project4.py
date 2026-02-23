@@ -2,6 +2,11 @@ import turtle, time, random
 from utils import *
 
 # Section 1 - setup
+
+#("Feed the unicorn cupcakes! dont let its hunger go into negatives")
+
+
+
 set_background ("Clouds")
 s1 = create_sprite("unicorn",-150,-180)
 s2 = create_sprite("realcoco")
@@ -41,7 +46,7 @@ window.listen()
 for i in range(1000000000):
     
     # TODO - put any automatic actions here
-    if i % 15 == 0:
+    if i % 30 == 0:
         hunger -= 1
 
 
