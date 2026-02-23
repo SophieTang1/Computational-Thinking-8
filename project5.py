@@ -5,14 +5,12 @@ from utils import *
 # TODO - create your player character and any other sprites
 set_background ("space")
 s1 = create_sprite("dogdog",-150,-180)
-s2 = create_sprite("star (1)")
-# TODO - set your background
-# TODO - set the starting value for your variables
+health = 500
+ 
 sprite_list = []
 
 # Section 2: Controls
-# TODO - define your controls
-# TODO - pick keys for each control
+
 def move_up():
     x = s1.xcor()
     y = s1.ycor() + 9
@@ -44,19 +42,22 @@ window.onkeypress(move_right,"d")
 window.listen()
 for i in range(10000000000):
 
-    if 1 % 50 == 0: 
-        x = random.randint(-300,300)
-        item = create_sprite("star(1)", x,200)
-        item.setheading(270)
+    if i % 700 == 0: 
+        y = random.randint(-300,300)
+        item = create_sprite("star (1)", 300,y)
+        item.setheading(180)
         sprite_list.append(item)
-        for item in sprite_list:
-            item.forward(5)
-    
-    # TODO - add code for automatic actions
+    for s2 in sprite_list:
+        s2 .forward(2)
 
-
-    # TODO - make an if statement for ending the game
-
+        if get_distance(s1,s2)<100:
+            health -= (5)
+            s2.hideturtle()
+        
+  
+    if health <= 100:
+        print (f"You died :( health: {health})")
+        break 
     
     time.sleep(0.01)
     window.update()
